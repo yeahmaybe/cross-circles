@@ -8,8 +8,10 @@ body{
 }
 .cell {
 	width: 30%;
+	display: flex;
 	text-align:center;
-	font-size: 120px;
+	line-height: height;
+	font-size: 70px;
 	font-family: Arial;
 	background-color: #DFEFFF;
 	box-shadow:
@@ -18,8 +20,10 @@ body{
 }
 .cell_pressed {
 	width: 30%;
-	text-align:center;
-	font-size: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 70px;
 	font-family: Arial;
 	background-color: #DFEFFF;
 	box-shadow:
@@ -34,21 +38,43 @@ body{
 	background-color: white;
 	transition: 0.5s;
 }
-#wrap{
-	display: flex;
-	flex-direction: column;
-	width: 70vh;
-	height: 70vh;
-	min-height: 300px;
-	justify-content: space-around;
-	background-color: #C0DBFB;
-	box-shadow: 
-		rgb(150, 170, 200)  0px 0px 10px 2px inset,
-		rgb(150, 170, 200, 0.3)  0px -10px 30px 1px inset;
-	padding:10px;
-	margin:auto;
-	border-radius: 15px;
+@media screen and (orientation: landscape) {
+	  #wrap{
+		display: flex;
+		flex-direction: column;
+		width: 70vh;
+		height: 70vh;
+		min-height: 400px;
+		min-width: 400px;
+		justify-content: space-around;
+		background-color: #C0DBFB;
+		box-shadow: 
+			rgb(150, 170, 200)  0px 0px 10px 2px inset,
+			rgb(150, 170, 200, 0.3)  0px -10px 30px 1px inset;
+		padding:10px;
+		margin:auto;
+		border-radius: 15px;
+	}
 }
+@media screen and (orientation: portrait) {
+  #wrap{
+		display: flex;
+		flex-direction: column;
+		width: 70vw;
+		height: 70vw;
+		min-height: 400px;
+		min-width: 400px;
+		justify-content: space-around;
+		background-color: #C0DBFB;
+		box-shadow: 
+			rgb(150, 170, 200)  0px 0px 10px 2px inset,
+			rgb(150, 170, 200, 0.3)  0px -10px 30px 1px inset;
+		padding:10px;
+		margin:auto;
+		border-radius: 15px;
+	}
+}
+
 .row{
 	display: flex;
 	flex-direction: row;
