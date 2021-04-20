@@ -1,0 +1,71 @@
+body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	height:100vh;
+	padding: 0;
+	margin: 0 auto;
+}
+.cell {
+	width: 30%;
+	text-align:center;
+	font-size: 120px;
+	font-family: Arial;
+	background-color: #DFEFFF;
+	box-shadow:
+		rgb(150, 170, 200)  0px 0px 5px 1px;
+
+}
+.cell_pressed {
+	width: 30%;
+	text-align:center;
+	font-size: 120px;
+	font-family: Arial;
+	background-color: #DFEFFF;
+	box-shadow:
+		rgb(150, 170, 200)  0px 0px 5px 1px;
+
+}
+.cell:hover {
+	background-color: #EDFAFC;
+	transition: 0.5s;
+}
+.cell:active {
+	background-color: white;
+	transition: 0.5s;
+}
+#wrap{
+	display: flex;
+	flex-direction: column;
+	width: 70vh;
+	height: 70vh;
+	min-height: 300px;
+	justify-content: space-around;
+	background-color: #C0DBFB;
+	box-shadow: 
+		rgb(150, 170, 200)  0px 0px 10px 2px inset,
+		rgb(150, 170, 200, 0.3)  0px -10px 30px 1px inset;
+	padding:10px;
+	margin:auto;
+	border-radius: 15px;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: transparent;
+	width: 100%;
+	height: 30%;
+}
+div .row:first-child :first-child{
+	border-top-left-radius: 5px;
+}
+div .row:first-child :last-child{
+	border-top-right-radius: 5px;
+}
+div .row:last-child :first-child{
+	border-bottom-left-radius: 5px;
+}
+div .row:last-child :last-child{
+	border-bottom-right-radius: 5px;
+}
