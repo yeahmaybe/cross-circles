@@ -44,8 +44,6 @@ body{
 		flex-direction: column;
 		width: 70vh;
 		height: 70vh;
-		min-height: 300px;
-		min-width: 300px;
 		justify-content: space-around;
 		background-color: #C0DBFB;
 		box-shadow: 
@@ -62,8 +60,6 @@ body{
 		flex-direction: column;
 		width: 70vw;
 		height: 70vw;
-		min-height: 300px;
-		min-width: 300px;
 		justify-content: space-around;
 		background-color: #C0DBFB;
 		box-shadow: 
