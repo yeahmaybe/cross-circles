@@ -10,8 +10,20 @@
 
 <body>
 	<script src="script.js"></script>
-
-	<div id="wrap" disabled>
+	<div id="menu" class = "active">
+		<div id="window"> 
+			FIRST TURN
+			<div class="buttons">
+				<div class="button" id="player_first" onclick="start('player')"> ME!</div>
+				<div class="button" id="bot_first" onclick="start('bot')">COMPUTER!</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel">
+		<div>You play as:</div>
+		<div class="char_change" onclick="change_char(this)">X</div>
+	</div>
+	<div id="wrap">
 		<div class="row">
 			<div class="cell" id="cell0" onclick="press(this)"></div>
 			<div class="cell" id="cell1" onclick="press(this)"></div>
@@ -28,7 +40,7 @@
 			<div class="cell" id="cell8" onclick="press(this)"></div>
 		</div>	
 	</div>
-	
+	<div class = "button" onclick="reset(this)">Reset</div>
 
 </body>
 </html>

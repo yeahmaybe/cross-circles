@@ -2,8 +2,8 @@ let field = [' ',' ',' ',
 			 ' ',' ',' ',
 			 ' ',' ',' '];
 
-let player_char = 'o';
-let bot_char = 'x';
+let player_char = 'x';
+let bot_char = 'o';
 
 
 function playerLost(){
@@ -41,11 +41,6 @@ function allOccupied() {
 	}
 	return true;
 }
-
-function botTurn(){
-
-}
-
 function checkWin(){
 	if(playerWin()) {
 		for(let i=0; i<9; i++){
@@ -62,7 +57,7 @@ function checkLost(){
 		alert("You lost!");
 	}
 }
-function cellIsFree(i=0){
+function cellIsFree(i){
 	if(field[i] == ' '){
 		return true;
 	}
@@ -136,9 +131,39 @@ function press(elem) {
 		setTimeout(checkWin, 200);
 		elem.className = "cell_pressed";
 
-		setTimeout(botTurn, 300);
+		setTimeout(botTurn, 150);
 		setTimeout(checkLost, 400);
 	}
 }
 
+function reset(elem){
+	for(let i=0; i<9; i++){
+		field[i] = ' ';
+		document.getElementById('cell'+i).textContent = '';
+		document.getElementById('cell'+i).className = "cell";
+	}
+	document.getElementById('menu').className = "active";
+}
+function change_char(elem) {
+	let tmp = player_char;
+	player_char = bot_char;
+	bot_char = tmp;
+	let i=0;
+	for(i=0; i<9; i++){
+		if(field[i] == 'x'){
+			field[i] = 'o';
+			document.getElementById('cell'+i).textContent = 'o';
+		}
+		else if(field[i] == 'o') {
+			field[i] = 'x';
+			document.getElementById('cell'+i).textContent = 'x';
+		}
+	}
+	if(elem.textContent == 'X') elem.textContent = 'O';
+	else elem.textContent = 'X';
+}
 
+function start(who){
+		document.getElementById('menu').className = "disabled";
+		if(who == 'bot') botTurn();
+}
