@@ -171,7 +171,7 @@ body{
 		flex-direction: column;
 	}
 }
-@media screen and (orientation: min-width: 800px) {
+@media screen and (orientation: max-width: 800px) {
 	.cell{
 		font-size: 15px;
 	}
