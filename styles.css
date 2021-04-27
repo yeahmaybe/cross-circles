@@ -120,7 +120,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 70px;
+	font-size: 90px;
 	font-family: Arial;
 	background-color: #DFEFFF;
 	box-shadow:
@@ -171,9 +171,9 @@ body{
 		flex-direction: column;
 	}
 }
-@media screen and (orientation: max-width: 800px) {
-	.cell{
-		font-size: 15px;
+@media screen and (max-width: 700px) {
+	.cell_pressed{
+		font-size: 55px;
 	}
 }
 
